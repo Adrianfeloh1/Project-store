@@ -1,12 +1,114 @@
 :root {
-    --blanco:#fff;
-    --negro:#0E1116;
-    --azul:#29335C;
-    --amarillo:#F6AE2D;
+    --blanco: #fff;
+    --negro: #0E1116;
+    --azul: #29335C;
+    --azulclaro: #404a7b;
+    --amarillo: #F6AE2D;
 
-    --fuentePrincipal: 'Averia Sans Libre', cursive;
+    --fuentePrincipal: 'Ramabhadra',sans-serif;
+    --fuenteSecundaria: 'Baloo 2', cursive;
 }
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* GLOBALES */
 
 body {
+    background-color: var(--azul);
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--amarillo);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/* header */
+
+.header{
+    display: flex;
+    justify-content: center;     
+}
+
+.header__logotipo{
+    width: 300px;
+    margin: 1rem 0;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--azulclaro);
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.footer__texto {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+}
+
+/* navegacion */
+.navegacion {
+    background-color: var(--azul);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 3rem; /* separa los elementos  que hayan en el contenedor (flexbox)*/
+}
+
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-size: 2rem; 
+}
+
+.navegacion__enlace--activo, /* modificador del BEM */
+.navegacion__enlace:hover {
+    color: var(--amarillo);    
     
 }
+
+
+
+
