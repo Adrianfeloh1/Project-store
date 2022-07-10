@@ -4,6 +4,7 @@
     --azul: #29335C;
     --azulclaro: #404a7b;
     --amarillo: #F6AE2D;
+    --amarilloOscuro: #d28e12;
 
     --fuentePrincipal: 'Ramabhadra', sans-serif;
     --fuenteSecundaria: 'Baloo 2', cursive;
@@ -34,7 +35,8 @@ a {
 }
 
 img {
-    max-width: 100%;
+    /* PARA HACER QUE EN CUALQUIER VISTA LA IMAGEN SE ADAPTE BIEN */
+    width: 100%;
 }
 
 .contenedor {
@@ -133,7 +135,7 @@ h3 {
 
 .producto__imagen {
     /* PARA LLENAR EL ESPACIO, LO CUAL CENTRA EL CONTENIDO ADAPTANDOSE AL RESPONSIVE*/
-    width: 100%;    
+       
     border-radius: 1rem;
 }
 
@@ -180,7 +182,7 @@ h3 {
 .nosotros { /* PASANDO A MOVILE CON LA IMAGEN PRIMERO */
     display: grid;
     grid-template-rows: repeat(2, auto);  /* IMAGEN QUEDA ABAJO */   
-    width: 100%;     
+      
 }
 
 .nosotros__contenido p{ 
@@ -206,9 +208,52 @@ h3 {
     margin: 0;
 }
 
-.bloque__imagen {
-    width:100%;
+/* -----------------PAGINA DEL PRODUCTO --------------------- */
+
+.camisa__contenido {
+    text-align: justify;
 }
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.formulario__campo {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1rem solid var(--azulclaro);
+    color: var(--azul);
+    font-size: 1.5rem;
+    font-family: var(--fuentePrincipal);       
+
+}
+
+.formulario__submit{
+    background-color: var(--amarillo);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    /* LAS TRANSICIONES SE HACEN EN LA CLASE USANDO EL MISMO VALOR DE LA PROPIEDAD (:HOVER) 
+    ESPECIFICANDO SU DURACCION Y/O TRANSICIÓN   */
+    transition: background-color .4s ease;
+    transition: font-size .4s ease;
+    border-radius: 1rem;
+ 
+}
+
+.formulario__submit:hover {
+    background-color: var(--amarilloOscuro);
+    font-size: 2.05rem;        
+}
+
+
+
 
 
 
@@ -252,8 +297,27 @@ h3 {
     }
     .nosotros__imagen {
         grid-column: 2 / 3;   /* PARA QUE LA IMAGEN PASE A LA DERECHA DE AHI EN ADELANTE */
-        width: 100%; 
-   }
+    }
+
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+    .formulario {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+
+    .formulario__submit{
+        grid-column: 1/3;
+    }
+
+    
+
+
 }
 
 @media (min-width: 768px) {
@@ -281,6 +345,6 @@ h3 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-    
+      
    
 }

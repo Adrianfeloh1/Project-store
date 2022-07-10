@@ -35,7 +35,37 @@
     </nav>
 
     <main class="contenedor">
-        <h1>Producto</h1>
+        <h1>Vue JS</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/7.jpg" alt="imagen camisa">
+            <div class="camisa__contenido">
+                <p> Necessitatibus. Facilis quod consequatur unde itaque corrupti.
+                    Aperiam vel perspiciatis nemo, a dicta placeat repudiandae inventore in!
+                    Ipsam placeat modi nesciunt eligendi necessitatibus. Facilis quod consequatur Aperiam vel.
+                </p>
+
+                <form class="formulario" action="">
+
+                    <select class="formulario__campo" name="tallas" id="tallas">
+                        <!-- CON ESL DISABLED SELECTED HACEMOS QUE MUESTRE UNA OPCION QUE NO SE PUEDA ELEGIR -->
+                        <option disabled selected value="#">Selecciona tu talla</option>
+                        <option value="#">S</option>
+                        <option value="#">M</option>
+                        <option value="#">L</option>
+                        <option value="#">XL</option>
+                    </select>
+                    <!-- TANTO SELECT COMO EL INPUT DEL FORMULARIO LLEVAN LA MISMA CLASE -->
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">    
+                </form>
+
+            </div>
+        </div>
+
+
+
+
     </main>
 
     <footer class="footer">

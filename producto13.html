@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ccs/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Baloo+2:wght@500&family=Basic&family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Ramabhadra&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logotipo" src="img/online-shop.jpg" alt="logotipo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Vue JS</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/13.jpg" alt="imagen camisa">
+            <div class="camisa__contenido">
+                <p> Necessitatibus. Facilis quod consequatur unde itaque corrupti.
+                    Aperiam vel perspiciatis nemo, a dicta placeat repudiandae inventore in!
+                    Ipsam placeat modi nesciunt eligendi necessitatibus. Facilis quod consequatur Aperiam vel.
+                </p>
+
+                <form class="formulario" action="">
+
+                    <select class="formulario__campo" name="tallas" id="tallas">
+                        <!-- CON ESL DISABLED SELECTED HACEMOS QUE MUESTRE UNA OPCION QUE NO SE PUEDA ELEGIR -->
+                        <option disabled selected value="#">Selecciona tu talla</option>
+                        <option value="#">S</option>
+                        <option value="#">M</option>
+                        <option value="#">L</option>
+                        <option value="#">XL</option>
+                    </select>
+                    <!-- TANTO SELECT COMO EL INPUT DEL FORMULARIO LLEVAN LA MISMA CLASE -->
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">    
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Online Shop - Todos los derechos reservados 2022.</p>
+    </footer>
+
+
+
+</body>
+
+</html>
